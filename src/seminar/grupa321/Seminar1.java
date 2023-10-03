@@ -10,8 +10,35 @@ package seminar.grupa321;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Seminar1 {
+
+    /**
+     * Citeste numere intregi de la consola pana la citirea lui 'stop'. Intrarile care nu sunt numere intregi sunt ignorate
+     *
+     * @return Lista de numere intregi
+     */
+    private static List<Integer> readConsole() {
+        List<Integer> numere = new ArrayList<Integer>();
+        Scanner cons = new Scanner(System.in);
+        System.out.println("Introduceti numere intregi. Stop pentru oprire.");
+
+        while (cons.hasNext()) {
+            String token = cons.next();
+
+            if ("stop".equals(token)) {
+                break;
+            }
+
+            try {
+                numere.add(Integer.parseInt(token));
+            } catch (NumberFormatException nfe) {
+
+            }
+        }
+        return numere;
+    }
 
     private static void sort(List<Integer> numbers) {
         boolean sorted = false;
@@ -44,9 +71,19 @@ public class Seminar1 {
     }
 
     public static void main(String[] args) {
-        List<Integer> numere = transformToInt(args);
+
+        // 1. Obtinem numerele
+        List<Integer> numere;
+        if (args.length > 0) {
+            numere = transformToInt(args);
+        } else {
+            numere = readConsole();
+        }
+
+        // 2. Sortam lista
         sort(numere);
 
+        // 3. Le afisam
         for (int x : numere) {
             System.out.println(x);
         }
