@@ -8,11 +8,11 @@ interface IIterator {
     public void nextNode();
 }
 
-class LinkedList {
+class LinkedList<T> {
 
     private Node head;
 
-    public void add(Object elem) {
+    public void add(T elem) {
 
         if (head == null) {
             head = new Node(null, elem);
@@ -36,9 +36,9 @@ class LinkedList {
      */
     class Node {
         private Node next;
-        private Object value;
+        private T value;
 
-        public Node(Node next, Object value) {
+        public Node(Node next, T value) {
             this.next = next;
             this.value = value;
         }
@@ -51,7 +51,7 @@ class LinkedList {
             return next;
         }
 
-        public Object getValue() {
+        public T getValue() {
             return value;
         }
     }
@@ -88,7 +88,7 @@ class LinkedList {
 
 public class CodeExample {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList<Object> list = new LinkedList<>();
         System.out.println(list.toString());
 
 //        LinkedList.Node nod = new list.Node(null,null);
