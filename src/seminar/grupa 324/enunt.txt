@@ -1,0 +1,7 @@
+Sa se creeze o aplicatie capabila sa gestioneze lucrul cu expresii matematice. Aplicatia trebuie sa suporte urmatoarele tipuri de expresii:
+-constante
+-expresii unare (suporta operatia de negare)
+-expresii binare (suporta operatiile de adaugare si scadere)
+
+Sa se afiseze la finalul executiei programului nr. de expresii instantiate.
+
