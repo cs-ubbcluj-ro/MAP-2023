@@ -1,6 +1,6 @@
 package seminar.grupa321.seminar2.domain;
 
-class Patient extends Entity {
+public class Patient extends Entity {
     private String name;
     private int age;
 
@@ -8,6 +8,15 @@ class Patient extends Entity {
         super(ID);
         this.name = name;
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                '}';
     }
 
     public String getName() {

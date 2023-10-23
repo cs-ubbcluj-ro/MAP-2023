@@ -1,4 +1,4 @@
-public class Seminar1 {
+public class Seminar1_324 {
     static abstract class Expresie {
         abstract double evalueaza();
     }

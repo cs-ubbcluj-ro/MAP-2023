@@ -5,9 +5,10 @@ package seminar.grupa321.seminar2.repository;
 import seminar.grupa321.seminar2.domain.Entity;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Repository<T extends Entity> {
-    ArrayList<T> elems;
+public class Repository<T extends Entity> implements Iterable {
+    ArrayList<T> elems = new ArrayList<>();
 
     public int getSize() {
         return elems.size();
@@ -37,5 +38,11 @@ public class Repository<T extends Entity> {
 
     public void addEntity(T elem) {
         if (!findByID(elem.getId())) elems.add(elem);
+    }
+
+    @Override
+    public Iterator iterator() {
+        // FIXME De reparat acest hack
+        return elems.iterator();
     }
 }

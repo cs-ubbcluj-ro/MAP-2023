@@ -1,6 +1,7 @@
-package seminar.grupa321;
+package seminar.grupa321.seminar2;
 
-import java.util.ArrayList;
+import seminar.grupa321.seminar2.domain.Patient;
+import seminar.grupa321.seminar2.repository.Repository;
 
 
 //Barac Sebastian Beniamin
@@ -29,4 +30,17 @@ public class Seminar2 {
         - ștergere
         - cum facem clasa asta să fie nice :) --» implementăm java.util.Iterable<T>
      */
+
+    public static void main(String[] args) {
+        Repository<Patient> repo = new Repository<>();
+
+        repo.addEntity(new Patient(1000, "Popescu Marius", 42));
+        repo.addEntity(new Patient(1001, "Ionescu Ana", 80));
+        repo.addEntity(new Patient(1002, "Zaris Oana", 12));
+        repo.addEntity(new Patient(1003, "Albu Iulian Ioan", 50));
+
+        for (Object p : repo) {
+            System.out.println(p);
+        }
+    }
 }
