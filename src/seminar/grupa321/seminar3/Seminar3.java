@@ -1,5 +1,10 @@
 package seminar.grupa321.seminar3;
 
+import seminar.grupa321.seminar3.Patient;
+import seminar.grupa321.seminar3.repo.IRepository;
+import seminar.grupa321.seminar3.repo.MemoryRepository;
+import seminar.grupa321.seminar3.repo.RepositoryException;
+
 public class Seminar3 {
     /*
 
@@ -22,4 +27,14 @@ public class Seminar3 {
 
     7. Wishful thinking -- service, ui, trick || treat !
      */
+
+    public static void main(String[] args) throws RepositoryException {
+        IRepository<Patient> repo = new MemoryRepository<>();
+        repo.add(new Patient(100, "Popescu Marian", 40));
+        repo.add(new Patient(101, "Balan Anca", 20));
+
+        for (Patient p : repo) {
+            System.out.println(p);
+        }
+    }
 }
