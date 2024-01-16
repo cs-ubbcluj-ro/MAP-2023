@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="carsButton" layoutX="85.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#onCarsBtnClicked" text="Cars" />
+      <Button fx:id="rentsButton" layoutX="405.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#onRentsBtnClicked" text="Rents" />
+   </children>
+</AnchorPane>
