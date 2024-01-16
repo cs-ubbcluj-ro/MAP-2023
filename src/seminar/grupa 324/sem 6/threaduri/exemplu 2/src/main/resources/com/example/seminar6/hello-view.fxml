@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      fx:controller="com.example.seminar6.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <ListView fx:id="lstMessages" prefHeight="200.0" prefWidth="200.0"/>
+    <HBox>
+        <Label text="Numbers"/>
+        <TextField fx:id="txtNumbers" prefWidth="100" text="10000"/>
+        <Label text="Threads"/>
+        <TextField fx:id="txtThreads" prefWidth="100" text="1"/>
+        <Button fx:id="btnCalculate" text="Calculate" onAction="#btnCalculateClicked"/>
+    </HBox>
+</VBox>
