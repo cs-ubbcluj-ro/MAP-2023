@@ -59,8 +59,8 @@ public class GeneralTextFileRepository <T extends Entity>
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
             Collection<T> entities = getAll();
             Class className = Class.forName(entityName);
+            Method method = className.getMethod("toStringLine");
             for (T entity: entities) {
-                Method method = className.getMethod("toStringLine");
                 bw.write(method.invoke(entity).toString());
             }
         } catch (IOException e) {
